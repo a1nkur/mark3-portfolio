@@ -17,11 +17,7 @@ import AnimateWhenVisible from "../Components/AnimateWhenVisible";
 import AnimateWhenIconsAreVisible from "../Components/AnimateWhenIconsAreVisible";
 
 import { motion } from "framer-motion";
-import {
-  genericAnimate,
-  titleAnimate,
-  imageAnimation,
-} from "../animate";
+import { genericAnimate, titleAnimate, imageAnimation } from "../animate";
 
 import { ThemeContext } from "../Contexts/ThemeContext";
 
@@ -59,11 +55,11 @@ const HomePage = () => {
         </ImageContainer>
       </SectionOne>
       <SectionTwo>
-        <TextDescription>
+        <TextDescriptionTwo>
           <Hide>
             <h1>
               <AnimateWhenVisible>
-                <span className="tech">Technologies</span>,
+                <span className="tech">Technologies</span>
               </AnimateWhenVisible>
             </h1>
           </Hide>
@@ -77,7 +73,7 @@ const HomePage = () => {
               </h3>
             </AnimateWhenVisible>
           </Hide>
-        </TextDescription>
+        </TextDescriptionTwo>
         <Icons>
           <div className="collection">
             <AnimateWhenIconsAreVisible>
@@ -113,11 +109,11 @@ const HomePage = () => {
       <Section3>
         <Title>
           <h2>
-            I like to showcase{" "}
+            I like to showcase{""}
             <AnimateWhenVisible>
               <span>my work</span>
-            </AnimateWhenVisible>{" "}
-            , you can see{" "}
+            </AnimateWhenVisible>
+            {""}, you can see{""}
             <AnimateWhenVisible>
               <span>my projects</span>
             </AnimateWhenVisible>{" "}
@@ -129,15 +125,14 @@ const HomePage = () => {
       <Section4>
         <Title>
           <h2>
-            I am also working on some technical and non techincal{" "}
+            I am also working on some technical & non-techincal{" "}
             <AnimateWhenVisible>
-              <span>blogs</span>
+              <span>blogs</span>.
             </AnimateWhenVisible>
-            . I like to document{" "}
+            I like to document{""}
             <AnimateWhenVisible>
-              <span>my journey of learning</span>
+              <span>my journey of learning</span>.
             </AnimateWhenVisible>
-            .
           </h2>
           <Link to="/blogs">Show Blogs</Link>
         </Title>
@@ -163,9 +158,62 @@ const Container = styled(motion.main)`
   h6 {
     color: ${props => props.theme.syntax};
   }
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  /* SMARTPHONE */
+  @media (max-width: 520px) {
+    padding: 0 3rem;
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
 `;
 
 const TextDescription = styled.div`
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 2.3rem;
+  }
+
+  span,
+  span.tech {
+    color: #5f98dd;
+  }
+
+  .frontend-key {
+    color: #b19bee;
+  }
+
+  .h3 {
+    padding-left: 1rem;
+  }
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  /* SMARTPHONE */
+  @media (max-width: 520px) {
+    min-height: 40vh;
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
+`;
+
+const TextDescriptionTwo = styled.div`
+  text-align: center;
+
   flex: 1;
 
   display: flex;
@@ -195,30 +243,15 @@ const TextDescription = styled.div`
   .h3 {
     padding-left: 1rem;
   }
-`;
-const ImageContainer = styled(motion.div)`
-  flex: 2;
-  overflow: hidden;
 
-  img {
-    height: 87vh;
-    width: 100%;
-    object-fit: cover;
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  /* SMARTPHONE */
+  @media (max-width: 520px) {
+    min-height: 30vh;
   }
-`;
 
-const Hide = styled.div`
-  overflow: hidden;
-`;
-
-const SectionOne = styled.section`
-  display: flex;
-`;
-
-const SectionTwo = styled.section`
-  min-height: 100vh;
-  display: flex;
-  flex: 1;
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
 `;
 
 const Icons = styled.div`
@@ -240,6 +273,114 @@ const Icons = styled.div`
     flex-wrap: wrap;
     gap: 3rem;
   }
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  /* SMARTPHONE */
+  @media (max-width: 520px) {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    img {
+      /* padding: rem; */
+      display: inline;
+      /* flex-basis: 4rem; */
+      height: 10vh !important;
+      width: 1rem;
+      width: 100%;
+      object-fit: cover;
+      padding-left: 2.5rem;
+    }
+
+    .collection {
+      width: 100%;
+    }
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
+`;
+
+const ImageContainer = styled(motion.div)`
+  flex: 2;
+  overflow: hidden;
+
+  img {
+    height: 87vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  /* SMARTPHONE */
+  @media (max-width: 520px) {
+    min-height: 40vh;
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
+`;
+
+const SectionOne = styled.section`
+  display: flex;
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  /* SMARTPHONE */
+  @media (max-width: 520px) {
+    display: block;
+    display: 45vh;
+
+    img {
+      height: 50vh;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
+`;
+
+const SectionTwo = styled.section`
+  min-height: 100vh;
+  display: flex;
+  flex: 1;
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  /* SMARTPHONE */
+  @media (max-width: 520px) {
+    display: block;
+    display: 45vh;
+
+    img {
+      height: 50vh;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
 `;
 
 const Section3 = styled.div`
@@ -273,6 +414,15 @@ const Section3 = styled.div`
       color: #000;
     }
   }
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  /* SMARTPHONE */
+  @media (max-width: 520px) {
+    min-height: 80vh;
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
 `;
 const Section4 = styled.div`
   min-height: 50vh;
@@ -305,8 +455,17 @@ const Section4 = styled.div`
       color: #000;
     }
   }
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  /* SMARTPHONE */
+  @media (max-width: 520px) {
+    a {
+      margin-bottom: 1rem;
+    }
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
 `;
 
 const Title = styled.div``;
-
-

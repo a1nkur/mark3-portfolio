@@ -4,11 +4,7 @@ import { ThemeContext } from "../Contexts/ThemeContext";
 import { useContext } from "react";
 
 import { motion } from "framer-motion";
-import {
-  genericAnimate,
-  fade,
-  titleAnimate,
-} from "../animate";
+import { genericAnimate, fade, titleAnimate } from "../animate";
 
 const ProjectsPage = () => {
   // Choose Theme
@@ -69,6 +65,18 @@ const Container = styled(motion.div)`
   p {
     color: ${props => props.theme.syntax};
   }
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  @media (max-width: 520px) {
+    padding: 5rem 3rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
 `;
 
 const Title = styled.div`
@@ -115,10 +123,33 @@ const ItemContainer = styled(motion.div)`
     flex: 0.7;
     p {
       width: 70%;
+      color: #aaa;
     }
 
     h2 {
       padding-bottom: 0.5rem;
     }
   }
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  @media (max-width: 520px) {
+    width: 100%;
+    display: block;
+
+    p {
+      width: 100%;
+      font-size: 0.9rem;
+    }
+
+    .links {
+      padding: 8px 0;
+    }
+
+    a {
+      width: 40%;
+    }
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
 `;

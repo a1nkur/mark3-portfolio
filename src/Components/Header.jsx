@@ -80,4 +80,18 @@ const Container = styled.header`
       padding: 0 2rem;
     }
   }
+
+  /* ------------------------------- MEDIA QUERY ------------------------------ */
+
+  @media (max-width: 520px) {
+    padding: 1rem 3rem;
+
+    .nav-links {
+      a {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+
+  /* ------------------------------- MEDIA QUERY END ------------------------------ */
 `;

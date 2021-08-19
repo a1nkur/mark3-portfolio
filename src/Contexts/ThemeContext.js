@@ -4,7 +4,7 @@ export const ThemeContext = createContext();
 
 const ThemeContextProvider = props => {
   const [stateData, setStateData] = useState({
-    isLightTheme: true,
+    isLightTheme: false,
     btnLight: { syntax: "#555", bg: "#ddd" },
     btnDark: { syntax: "#ddd", bg: "#171010" },
     headerLight: {
