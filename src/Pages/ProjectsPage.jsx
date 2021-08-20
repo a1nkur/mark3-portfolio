@@ -88,7 +88,7 @@ const Title = styled.div`
 `;
 
 const ItemContainer = styled(motion.div)`
-  border: 1px solid #ccc;
+  border: 1px solid #b19bee;
   border-radius: 3px;
   padding: 1rem;
   width: 80%;
