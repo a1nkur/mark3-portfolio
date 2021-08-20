@@ -113,16 +113,21 @@ export const projectArr = [
 export const blogsArr = [
   {
     id: uuidv4(),
-    blogTitle: "lorem lorem",
-    Month: "novmbber 21323",
-    description: "asdasd asd asd asdasd akjsdjaskdh kasjdhkjasdh",
-    linkToBlog: "",
+    blogTitle:
+      "Three essential react hooks that will supercharge your next webapp.",
+    Month: "August, 2021",
+    description:
+      "Here I explained how these three named hooks can help you build more robust and complex webapps. These are advanced react hooks and to understand them better a basic knowledge of react components, ES6 javascript is required.",
+    linkToBlog:
+      "https://dev.to/ankur29mac/three-essential-react-hooks-that-will-supercharge-your-next-webapp-1jeo",
   },
   {
     id: uuidv4(),
-    blogTitle: "",
-    Month: "",
-    description: "",
-    linkToBlog: "",
+    blogTitle: "Styled-Components : Efficiently write CSS in JS File.",
+    Month: "August, 2021",
+    description:
+      "In this article, I have explaied how we can leverage the power of a third party react library to write a clean, modular and robust CSS to build beautiful and hassleless components.",
+    linkToBlog:
+      "https://dev.to/ankur29mac/styled-components-efficiently-write-css-in-js-file-1nj6",
   },
 ];

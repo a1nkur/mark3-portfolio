@@ -39,6 +39,8 @@ const ThemeContextProvider = props => {
     contentBgDark: { bg: "#080705", syntax: "#fff" },
     descLight: { titleSyntax: "#000", paragraphSyntax: "#000" },
     descDark: { titleSyntax: "#fff", paragraphSyntax: "#ddd" },
+    blogLight: { syntax: "#000", title: "#649FE8", bg: "#fff" },
+    blogDark: { syntax: "#ccc", title: "#b19bee", bg: "#000" },
   });
 
   const toggleTheme = () =>

@@ -7,6 +7,7 @@ import { useContext } from "react";
 
 import { motion } from "framer-motion";
 import { genericAnimate, fade, titleAnimate } from "../animate";
+import { Link } from "react-router-dom";
 
 const BlogsPage = () => {
   // Choose Theme
@@ -26,8 +27,8 @@ const BlogsPage = () => {
         </motion.h1>
       </Title>
       <div className="list__container">
-        {blogsArr.map(item => (
-          <Item key={item.id} item={item} />
+        {blogsArr.map((item, index) => (
+          <Item key={item.id} item={item} index={index} />
         ))}
       </div>
     </Container>
@@ -36,13 +37,20 @@ const BlogsPage = () => {
 
 export default BlogsPage;
 
-const Item = ({ item }) => {
+const Item = ({ item, index }) => {
   return (
     <ItemContainer variants={fade}>
       <h2>{item.blogTitle}</h2>
       <h4>{item.month}</h4>
       <p>{item.description}</p>
-      <a href={item.linkToLiveProject}>Read More</a>
+      <Link to={`/blogs/blog${index + 1}`}>
+        <a className="a-tag" href={item.linkToLiveProject}>
+          Read More
+        </a>
+      </Link>
+      <a className="a-tag" href={item.linkToBlog}>
+        Read it on Dev.to
+      </a>
     </ItemContainer>
   );
 };
@@ -91,7 +99,7 @@ const ItemContainer = styled(motion.div)`
   width: 80%;
   margin: 0.4rem 0;
 
-  a {
+  a.a-tag {
     display: block;
     width: 15%;
     background-color: transparent;
@@ -131,7 +139,7 @@ const ItemContainer = styled(motion.div)`
       padding-bottom: 1rem;
     }
 
-    a {
+    a.a-tag {
       width: 40%;
     }
   }
