@@ -17,7 +17,7 @@ const Footer = () => {
         </a>
       </Links>
       <FooterText>
-        <p> © 2021 | ankur29mac</p>
+        <p> © 2021 | ankur29mac@gmail.com</p>
       </FooterText>
     </FooterContainer>
   );
@@ -38,8 +38,10 @@ const FooterContainer = styled.footer`
   justify-content: flex-end;
 `;
 const FooterText = styled.footer`
-  color: #000;
   padding-bottom: 1rem;
+  p {
+    color: #000;
+  }
 `;
 const Links = styled.div`
   padding: 3rem 0rem;
