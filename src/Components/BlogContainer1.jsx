@@ -198,9 +198,11 @@ const BlogContainer1 = () => {
         this is where useContext hook comes for the rescue.
       </p>
       <h3>Conclusion</h3>
-      These three advanced react hooks allows you to build more powerful and
-      robust frontend web applications. The vast usage of react hooks have made
-      modern way of building web apps easier. Happy Coding!
+      <p>
+        These three advanced react hooks allows you to build more powerful and
+        robust frontend web applications. The vast usage of react hooks have
+        made modern way of building web apps easier. Happy Coding!
+      </p>
     </Container>
   );
 };
