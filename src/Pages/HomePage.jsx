@@ -290,7 +290,7 @@ const Icons = styled.div`
       width: 1rem;
       width: 100%;
       object-fit: cover;
-      padding-left: 2.5rem;
+      padding-left: 1.5rem;
     }
 
     .collection {

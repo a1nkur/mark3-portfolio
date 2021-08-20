@@ -84,7 +84,7 @@ const Container = styled.header`
   /* ------------------------------- MEDIA QUERY ------------------------------ */
 
   @media (max-width: 520px) {
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
 
     .nav-links {
       a {
